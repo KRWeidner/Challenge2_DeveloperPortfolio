@@ -51,9 +51,9 @@ header ul a:hover {
     border-radius: 50px;
     border-style: groove;
     border-color: #66CCCC;
-    margin: -19rem 6rem;
+    margin: -19rem 8rem;
     margin-bottom: 50px;
-    background-image: url("../images/ProfilePic.jpeg");
+    background-image: url("../images/profile-pic.jpg");
     background-size: cover;
     background-position:center;
 }
