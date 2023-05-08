@@ -29,7 +29,6 @@ header h1 {
 header nav{   
     color: var(--aqua);
     text-align: end;
-    width: fit-content;
     float: right;
 }
 
@@ -38,11 +37,34 @@ header nav a {
     display: inline-block;   
     font-size: 120%;
     padding: 10px;
+    text-decoration-thickness: 3px;
 }
 
 header ul a:hover {
     color: white;
 
+}
+
+.profile-pic {
+    height: 250px;
+    width: 250px;
+    border-radius: 50px;
+    border-style: groove;
+    border-color: #66CCCC;
+    margin: -19rem 6rem;
+    margin-bottom: 50px;
+    background-image: url("../images/ProfilePic.jpeg");
+    background-size: cover;
+    background-position:center;
+}
+
+.background-pic {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 25px;
+    background-image: url("../images/background-image.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 @media screen and (max-width: 1023px) {
