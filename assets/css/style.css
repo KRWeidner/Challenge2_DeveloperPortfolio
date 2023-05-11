@@ -1,6 +1,7 @@
 :root {
     --aqua: #66CCCC;
     --gray: #3d3d3d;
+    --subBlue: #98c0e4;
 }
 
 * {
@@ -10,6 +11,9 @@
 
 body {
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 header {
@@ -50,7 +54,7 @@ header ul a:hover {
     width: 250px;
     border-radius: 50px;
     border-style: groove;
-    border-color: #66CCCC;
+    border-color: var(--aqua);
     margin: -19rem 8rem;
     margin-bottom: 50px;
     background-image: url("../images/profile-pic.jpg");
@@ -70,11 +74,10 @@ header ul a:hover {
 main {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
 }
 
 main h1 {
-    color: #98c0e4;
+    color: var(--subBlue);
     text-align: end;
     font-size: 40px;
     margin: 15px 15px 0 25px;
@@ -86,13 +89,43 @@ main h1 {
 }
 
 #about-me-para{
-    border-left: 5px solid #98c0e4;
+    border-left: 5px solid var(--subBlue);
 }
 
 .about-me-section p {
     margin-left: 15px;
     line-height: 20px;
 }
+
+footer{
+    color: var(--subBlue);
+    display: flex;
+    align-items: stretch;
+}
+
+footer h1{
+    text-align: end;
+    font-size: 40px;
+    margin: 15px 15px 0 25px;
+}
+
+.contact-info{
+    border-left: 5px solid var(--subBlue);;
+    font-size: 120%;
+    
+}
+
+.contact-info ul{
+    margin-left: 15px; 
+}
+
+.link-element{
+    margin:10px;
+    display: inline-block;
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+}
+
 
 @media screen and (max-width: 1023px) {
     header {
