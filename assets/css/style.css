@@ -1,6 +1,6 @@
-:root{
+:root {
     --aqua: #66CCCC;
-    --gray: gray;
+    --gray: #3d3d3d;
 }
 
 * {
@@ -8,7 +8,7 @@
     margin: 0;
 }
 
-body{
+body {
     background-color: white;
 }
 
@@ -26,7 +26,7 @@ header h1 {
     color: var(--gray);
 }
 
-header nav{   
+header nav {
     color: var(--aqua);
     text-align: end;
     float: right;
@@ -34,7 +34,7 @@ header nav{
 
 header nav a {
     color: var(--aqua);
-    display: inline-block;   
+    display: inline-block;
     font-size: 120%;
     padding: 10px;
     text-decoration-thickness: 3px;
@@ -55,7 +55,7 @@ header ul a:hover {
     margin-bottom: 50px;
     background-image: url("../images/profile-pic.jpg");
     background-size: cover;
-    background-position:center;
+    background-position: center;
 }
 
 .background-pic {
@@ -67,19 +67,47 @@ header ul a:hover {
     background-position: center;
 }
 
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main h1 {
+    color: #98c0e4;
+    text-align: end;
+    font-size: 40px;
+    margin: 15px 15px 0 25px;
+}
+
+.about-me-section {
+    display: flex;
+    align-items: stretch;
+}
+
+#about-me-para{
+    border-left: 5px solid #98c0e4;
+}
+
+.about-me-section p {
+    margin-left: 15px;
+    line-height: 20px;
+}
+
 @media screen and (max-width: 1023px) {
     header {
         padding: 0;
     }
-    header h1{
+
+    header h1 {
         width: 100%;
         text-align: center;
         text-indent: 0;
     }
-    header nav{
+
+    header nav {
         width: 100%;
         text-align: center;
         float: none;
     }
 }
-
