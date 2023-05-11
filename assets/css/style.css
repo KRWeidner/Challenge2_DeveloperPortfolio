@@ -128,6 +128,11 @@ main h1 {
     display: flex;
 }
 
+.work-card a:hover {
+    background-color: yellow;
+    color: yellow;
+}
+
 .biggest-card {
     flex: 100%;
     outline: solid var(--aqua);
