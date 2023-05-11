@@ -13,7 +13,7 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 header {
@@ -49,6 +49,17 @@ header ul a:hover {
 
 }
 
+#name-tag {
+    background-color: var(--aqua);
+    position: absolute;
+    top: 195px;
+    text-align: center;
+    left:383px;
+    color: var(--gray);
+    padding: 20px 40px 20px 40px;
+    text-decoration: overline underline;
+}
+
 .profile-pic {
     height: 250px;
     width: 250px;
@@ -74,6 +85,9 @@ header ul a:hover {
 main {
     display: flex;
     flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
 }
 
 main h1 {
@@ -86,11 +100,12 @@ main h1 {
 
 .about-me-section {
     display: flex;
-    align-items: stretch;
+    align-items: center;
 }
 
 #about-me-para {
     border-left: 5px solid var(--subBlue);
+    margin-right: 50px;
 }
 
 .about-me-section p {
@@ -112,6 +127,7 @@ main h1 {
     border-left: 5px solid var(--subBlue);
     display: flex;
     flex-wrap: wrap;
+    margin-right: 50px;
     justify-content: flex-start;
     height: 50%;
     width: 80%;
@@ -119,18 +135,12 @@ main h1 {
 
 .work-card {
     margin-left: 15px;
-    flex: 2 2 300px; 
-    /* flex:40%; */
+    flex: 1 1 45%; 
     outline: solid var(--aqua);
     position: relative;
     margin-bottom: 20px;
     align-items: center;
     display: flex;
-}
-
-.work-card a:hover {
-    background-color: yellow;
-    color: yellow;
 }
 
 .biggest-card {
@@ -161,8 +171,7 @@ footer {
     color: var(--subBlue);
     display: flex;
     flex-wrap: wrap;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    margin: 25px 0 25px 25px;
 }
 
 footer h1 {
@@ -210,9 +219,45 @@ footer h1 {
     main {
         flex-direction: column;
     }
+
+    .about-me-section{
+        padding-top:80px;
+    }
+
+    #about-me-para {
+        padding-top:0;
+        border-top: 5px solid var(--subBlue);
+        width: 100%;
+        border-left: 0;
+    }
+
+    .about-me-section p {
+        margin-top: 10px;
+    }
+
+    .about-me-section{
+        width: 100%;
+    }
+
+    .work-cards-group {
+        border-top: 5px solid var(--subBlue);
+        border-left: 0;
+        margin-top: 80px;
+        width: 100%;
+    }
+
+    .biggest-card {
+        margin-top: 25px;
+    }
+
+    .contact-info {
+        border-top: 5px solid var(--subBlue);
+        border-left:0;
+        width: 80%;
+    }
 }
 
-@media  screen and (max-width: 425px) {
+@media  screen and (max-width: 600px) {
     .work-card{
         flex: 100%;
     }
