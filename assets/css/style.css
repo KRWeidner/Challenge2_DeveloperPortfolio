@@ -80,7 +80,8 @@ main h1 {
     color: var(--subBlue);
     text-align: end;
     font-size: 40px;
-    margin: 15px 15px 0 25px;
+    margin: 15px 15px 0 70px;
+    justify-content: center;
 }
 
 .about-me-section {
@@ -88,7 +89,7 @@ main h1 {
     align-items: stretch;
 }
 
-#about-me-para{
+#about-me-para {
     border-left: 5px solid var(--subBlue);
 }
 
@@ -97,30 +98,87 @@ main h1 {
     line-height: 20px;
 }
 
-footer{
-    color: var(--subBlue);
+.work-section {
     display: flex;
     align-items: stretch;
+    margin-top: 15px;
 }
 
-footer h1{
+.work-section h1{
+    margin-left: 78px;
+}
+
+.work-cards-group {
+    border-left: 5px solid var(--subBlue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 50%;
+    width: 80%;
+}
+
+.work-card {
+    margin-left: 15px;
+    flex: 2 2 300px; 
+    /* flex:40%; */
+    outline: solid var(--aqua);
+    position: relative;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.biggest-card {
+    flex: 100%;
+    outline: solid var(--aqua);
+    margin-left: 15px;
+    position: relative;
+    margin-bottom: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.project-header {
+    background-color: var(--aqua);
+    position: absolute;
+    bottom: 30px;
+    color: var(--gray);
+    padding: 30px 50px 30px 20px;
+}
+
+figure img {
+    max-width: 100%;
+    max-height: 100%;
+    flex-shrink: 0;
+}
+
+footer {
+    color: var(--subBlue);
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+footer h1 {
     text-align: end;
     font-size: 40px;
-    margin: 15px 15px 0 25px;
+    margin: 1px 10px 15px 0px;
+    flex-wrap: wrap;
+    display: flex;
 }
 
-.contact-info{
-    border-left: 5px solid var(--subBlue);;
+.contact-info {
+    border-left: 5px solid var(--subBlue);
     font-size: 120%;
-    
 }
 
-.contact-info ul{
-    margin-left: 15px; 
+.contact-info ul {
+    margin-left: 15px;
 }
 
-.link-element{
-    margin:10px;
+.link-element {
+    margin: 10px;
     display: inline-block;
     text-decoration: underline;
     text-decoration-thickness: 3px;
@@ -142,5 +200,15 @@ footer h1{
         width: 100%;
         text-align: center;
         float: none;
+    }
+
+    main {
+        flex-direction: column;
+    }
+}
+
+@media  screen and (max-width: 425px) {
+    .work-card{
+        flex: 100%;
     }
 }
