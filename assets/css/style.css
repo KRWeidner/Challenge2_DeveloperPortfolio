@@ -13,7 +13,6 @@ body {
     background-color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 header {
@@ -54,7 +53,7 @@ header ul a:hover {
     position: absolute;
     top: 195px;
     text-align: center;
-    left:383px;
+    left: 349px;
     color: var(--gray);
     padding: 20px 40px 20px 40px;
     text-decoration: overline underline;
@@ -64,9 +63,9 @@ header ul a:hover {
     height: 250px;
     width: 250px;
     border-radius: 50px;
-    border-style: groove;
+    border-style: solid;
     border-color: var(--aqua);
-    margin: -19rem 8rem;
+    margin: -19rem 6rem;
     margin-bottom: 50px;
     background-image: url("../images/profile-pic.jpg");
     background-size: cover;
@@ -75,7 +74,7 @@ header ul a:hover {
 
 .background-pic {
     height: 300px;
-    width: 100%;
+    width: 100vw;
     margin-bottom: 25px;
     background-image: url("../images/background-image.jpg");
     background-size: cover;
@@ -85,9 +84,8 @@ header ul a:hover {
 main {
     display: flex;
     flex-wrap: wrap;
-  justify-content: center;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
+    align-content: center;
+
 }
 
 main h1 {
@@ -95,17 +93,14 @@ main h1 {
     text-align: end;
     font-size: 40px;
     margin: 15px 15px 0 70px;
-    justify-content: center;
 }
 
 .about-me-section {
     display: flex;
-    align-items: center;
 }
 
 #about-me-para {
     border-left: 5px solid var(--subBlue);
-    margin-right: 50px;
 }
 
 .about-me-section p {
@@ -115,27 +110,24 @@ main h1 {
 
 .work-section {
     display: flex;
-    align-items: stretch;
+    align-items: start;
     margin-top: 15px;
 }
 
-.work-section h1{
-    margin-left: 78px;
+.work-section h1 {
+    margin-left: 79px;
 }
 
 .work-cards-group {
     border-left: 5px solid var(--subBlue);
     display: flex;
     flex-wrap: wrap;
-    margin-right: 50px;
-    justify-content: flex-start;
-    height: 50%;
-    width: 80%;
+    margin-right: 20px;
 }
 
 .work-card {
     margin-left: 15px;
-    flex: 1 1 45%; 
+    flex: 1 1 45%;
     outline: solid var(--aqua);
     position: relative;
     margin-bottom: 20px;
@@ -164,22 +156,19 @@ main h1 {
 figure img {
     max-width: 100%;
     max-height: 100%;
-    flex-shrink: 0;
+    width: fit-content;
 }
 
 footer {
     color: var(--subBlue);
     display: flex;
-    flex-wrap: wrap;
-    margin: 25px 0 25px 25px;
+    align-items: center;
 }
 
 footer h1 {
     text-align: end;
     font-size: 40px;
     margin: 1px 10px 15px 0px;
-    flex-wrap: wrap;
-    display: flex;
 }
 
 .contact-info {
@@ -188,7 +177,8 @@ footer h1 {
 }
 
 .contact-info ul {
-    margin-left: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
 }
 
 .link-element {
@@ -205,13 +195,12 @@ footer h1 {
     }
 
     header h1 {
-        width: 100%;
+        width: 100vw;
         text-align: center;
         text-indent: 0;
     }
 
     header nav {
-        width: 100%;
         text-align: center;
         float: none;
     }
@@ -220,14 +209,20 @@ footer h1 {
         flex-direction: column;
     }
 
-    .about-me-section{
-        padding-top:80px;
+    main h1 {
+        margin-left: 0;
+    }
+
+    .about-me-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 20px 0 20px;
     }
 
     #about-me-para {
-        padding-top:0;
+        padding-top: 0;
         border-top: 5px solid var(--subBlue);
-        width: 100%;
         border-left: 0;
     }
 
@@ -235,30 +230,61 @@ footer h1 {
         margin-top: 10px;
     }
 
-    .about-me-section{
-        width: 100%;
+    .work-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px 0 35px;
+    }
+
+    .work-section h1 {
+        margin-left: 0;
     }
 
     .work-cards-group {
         border-top: 5px solid var(--subBlue);
         border-left: 0;
-        margin-top: 80px;
-        width: 100%;
+        margin-top: 10px;
     }
 
     .biggest-card {
         margin-top: 25px;
     }
 
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 15px 0 35px;
+    }
+
     .contact-info {
         border-top: 5px solid var(--subBlue);
-        border-left:0;
-        width: 80%;
+        border-left: 0;
     }
 }
 
-@media  screen and (max-width: 600px) {
-    .work-card{
+@media screen and (max-width: 600px) {
+    .work-card {
         flex: 100%;
+    }
+
+    #name-tag {
+        top: 310px;
+        text-align: center;
+        left: 97px;
+        border-radius: 0 0 15px 15px;
+        padding: 10px 55px 10px 55px;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    main {
+        margin-right: 50px;
+    }
+
+    .contact-info {
+        width: 94%;
+        padding: 10px 0;
     }
 }
